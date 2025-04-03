@@ -40,6 +40,7 @@ export default function RootLayout() {
     <>
       <Stack>
         <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
+        <Stack.Screen name="auth" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="dark" />

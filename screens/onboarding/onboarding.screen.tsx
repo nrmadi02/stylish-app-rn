@@ -1,8 +1,6 @@
 import {
   FlatList,
-  Text,
   useWindowDimensions,
-  View,
   ViewToken,
 } from "react-native";
 import Animated, {
@@ -19,6 +17,7 @@ import { dataOnboarding, IOnboardingData } from "./data/onboarding.data";
 import { OnboardingPagination } from "./components/onboarding.pagination";
 import PrevButton from "./components/prev.button";
 import NextButton from "./components/next.button";
+import { router } from "expo-router";
 
 export default function OnboardingScreen() {
   const { width: SCREEN_WIDTH } = useWindowDimensions();
@@ -81,7 +80,7 @@ export default function OnboardingScreen() {
         <NextButton
           onClick={() => {
             if (flatListIndex.value === dataOnboarding.length - 1) {
-              console.log("Get Started");
+              router.push('/auth/sign-in')
             } else {
               flatListRef.current?.scrollToIndex({
                 index: flatListIndex.value + 1,
