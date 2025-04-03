@@ -63,6 +63,7 @@ const ForgotPasswordText = styled.Text`
   font-size: 12px;
   margin-top: 8px;
   text-align: right;
+  font-family: "Poppins-Regular";
 `;
 
 const ButtonSignIn = styled.TouchableOpacity`
@@ -76,5 +77,6 @@ const ButtonSignIn = styled.TouchableOpacity`
 const ButtonSignInText = styled.Text`
   color: white;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Poppins-SemiBold";
 `;

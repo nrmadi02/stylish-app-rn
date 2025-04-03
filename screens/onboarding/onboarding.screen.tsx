@@ -195,10 +195,10 @@ const ItemOnboarding = styled.View<{ width: number }>`
 
 const ItemTitle = styled.Text`
   font-size: 24px;
-  font-weight: 900;
   color: #000;
   text-align: center;
   margin-bottom: 10px;
+  font-family: "Poppins-Bold";
 `;
 
 const ItemText = styled.Text`
@@ -207,7 +207,7 @@ const ItemText = styled.Text`
   line-height: 20px;
   margin-inline: 30px;
   font-size: 14px;
-  font-weight: 500;
+  font-family: "Poppins-Medium";
 `;
 
 const FooterOnboarding = styled.View<{ width: number }>`

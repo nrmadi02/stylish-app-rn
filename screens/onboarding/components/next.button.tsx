@@ -68,6 +68,6 @@ const Button = styled(TouchableOpacity)`
 const ButtonText = styled.Text`
   color: #f83758;
   font-size: 16px;
-  font-weight: bold;
   text-align: center;
+  font-family: "Poppins-SemiBold";
 `;

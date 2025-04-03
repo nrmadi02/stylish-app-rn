@@ -12,7 +12,24 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const hasMounted = useRef(false);
   const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    "Poppins-Regular": require("../assets/fonts/poppins/Poppins-Regular.ttf"),
+    "Poppins-Medium": require("../assets/fonts/poppins/Poppins-Medium.ttf"),
+    "Poppins-Bold": require("../assets/fonts/poppins/Poppins-Bold.ttf"),
+    "Poppins-SemiBold": require("../assets/fonts/poppins/Poppins-SemiBold.ttf"),
+    "Poppins-Light": require("../assets/fonts/poppins/Poppins-Light.ttf"),
+    "Poppins-ExtraLight": require("../assets/fonts/poppins/Poppins-ExtraLight.ttf"),
+    "Poppins-Thin": require("../assets/fonts/poppins/Poppins-Thin.ttf"),
+    "Poppins-ExtraBold": require("../assets/fonts/poppins/Poppins-ExtraBold.ttf"),
+    "Poppins-Black": require("../assets/fonts/poppins/Poppins-Black.ttf"),
+    "Poppins-Italic": require("../assets/fonts/poppins/Poppins-Italic.ttf"),
+    "Poppins-MediumItalic": require("../assets/fonts/poppins/Poppins-MediumItalic.ttf"),
+    "Poppins-BoldItalic": require("../assets/fonts/poppins/Poppins-BoldItalic.ttf"),
+    "Poppins-SemiBoldItalic": require("../assets/fonts/poppins/Poppins-SemiBoldItalic.ttf"),
+    "Poppins-LightItalic": require("../assets/fonts/poppins/Poppins-LightItalic.ttf"),
+    "Poppins-ExtraLightItalic": require("../assets/fonts/poppins/Poppins-ExtraLightItalic.ttf"),
+    "Poppins-ThinItalic": require("../assets/fonts/poppins/Poppins-ThinItalic.ttf"),
+    "Poppins-ExtraBoldItalic": require("../assets/fonts/poppins/Poppins-ExtraBoldItalic.ttf"),
+    "Poppins-BlackItalic": require("../assets/fonts/poppins/Poppins-BlackItalic.ttf"),
   });
 
   useIsomorphicLayoutEffect(() => {

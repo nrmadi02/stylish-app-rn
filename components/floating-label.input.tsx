@@ -5,6 +5,7 @@ import {
   TextInputProps,
   TextStyle,
   TouchableWithoutFeedback,
+  TouchableOpacity,
 } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import styled from "styled-components/native";
@@ -58,6 +59,7 @@ const FloatingLabelInput = <T extends FieldValues>({
 
   const labelStyle: Animated.AnimatedProps<TextStyle> = {
     position: "absolute",
+    fontFamily: "Poppins-Regular",
     left: iconName ? 43 : 12,
     top: animatedIsFocused.interpolate({
       inputRange: [0, 1],
@@ -104,16 +106,17 @@ const FloatingLabelInput = <T extends FieldValues>({
           blurOnSubmit
         />
         {secureTextEntry && (
-          <TouchableWithoutFeedback
+          <TouchableOpacity
             onPress={() => {
               setVisible(!visible);
             }}
+            style={{ padding: 2 }}
           >
             <InputIcon
               name={visible ? "visibility-off" : "visibility"}
               size={24}
             />
-          </TouchableWithoutFeedback>
+          </TouchableOpacity>
         )}
       </FieldContainer>
     </InputContainer>
@@ -136,6 +139,7 @@ const FieldContainer = styled.View`
 
 const StyledTextInput = styled(TextInput)`
   flex: 1;
+  font-family: 'Poppins-Regular';
 `;
 
 const ForwardedInput = React.forwardRef<TextInput, TextInputProps>(
@@ -149,7 +153,7 @@ const InputIcon = styled(MaterialIcons)`
 `;
 
 const InputContainer = styled.View`
-padding-top: 20px;
+  padding-top: 20px;
   position: relative;
 `;
 
@@ -161,6 +165,7 @@ const AnimatedErrorText = styled(Animated.Text)`
   position: absolute;
   right: 8px;
   top: 2px;
+  font-family: "Poppins-Regular";
 `;
 
 export default FloatingLabelInput;
