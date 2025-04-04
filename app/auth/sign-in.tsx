@@ -18,6 +18,7 @@ export default function SignInPage() {
       navigation.removeListener("beforeRemove", listener);
     };
   }, []);
+  
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>

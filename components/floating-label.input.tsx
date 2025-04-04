@@ -4,7 +4,7 @@ import {
   Animated,
   TextInputProps,
   TextStyle,
-  TouchableWithoutFeedback,
+  Platform,
   TouchableOpacity,
 } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
@@ -67,7 +67,7 @@ const FloatingLabelInput = <T extends FieldValues>({
     }),
     fontSize: animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [14, 12],
+      outputRange: [16, 12],
     }),
     color: animatedIsFocused.interpolate({
       inputRange: [0, 1],
@@ -87,9 +87,12 @@ const FloatingLabelInput = <T extends FieldValues>({
       )}
       <FieldContainer>
         {iconName && <InputIcon name={iconName} size={24} />}
-        <TouchableWithoutFeedback onPress={() => inputRef.current?.focus()}>
-          <Animated.Text style={labelStyle}>{label}</Animated.Text>
-        </TouchableWithoutFeedback>
+        <Animated.Text
+          onPress={() => inputRef.current?.focus()}
+          style={labelStyle}
+        >
+          {label}
+        </Animated.Text>
         <ForwardedInput
           {...props}
           value={value}
@@ -135,11 +138,12 @@ const FieldContainer = styled.View`
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  height: ${Platform.OS === "ios" ? "62px" : "auto"};
 `;
 
 const StyledTextInput = styled(TextInput)`
   flex: 1;
-  font-family: 'Poppins-Regular';
+  font-size: ${Platform.OS === "ios" ? "18px" : "16px"};
 `;
 
 const ForwardedInput = React.forwardRef<TextInput, TextInputProps>(

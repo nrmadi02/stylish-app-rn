@@ -2,9 +2,9 @@ import { Link } from "expo-router";
 import React from "react";
 import styled from "styled-components/native";
 
-export default function SignInFooter() {
+export default function SignUpFooter() {
   return (
-    <SignInFooterContainer>
+    <SignUpFooterContainer>
       <HelpText>- OR Continue with -</HelpText>
       <SocialLoginContainer>
         <SocialButtonIcon>
@@ -18,17 +18,18 @@ export default function SignInFooter() {
         </SocialButtonIcon>
       </SocialLoginContainer>
       <SignUpText>
-        <SignUpTextHelper>Create an account? </SignUpTextHelper>
-        <Link href="/auth/sign-up">
-          <SignUpLink>Sign Up</SignUpLink>
+        <SignUpTextHelper>I Already Have an Account? </SignUpTextHelper>
+        <Link href="/auth/sign-in">
+          <SignUpLink>Login</SignUpLink>
         </Link>
       </SignUpText>
-    </SignInFooterContainer>
+    </SignUpFooterContainer>
   );
 }
 
-const SignInFooterContainer = styled.View`
-  margin-top: 70px;
+const SignUpFooterContainer = styled.View`
+  margin-top: 30px;
+  padding-bottom: 20px;
 `;
 
 const HelpText = styled.Text`
